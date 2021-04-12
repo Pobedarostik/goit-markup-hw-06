@@ -597,6 +597,10 @@ header {
   margin-top: 12px;
 }
 
+.title-mailing {
+  margin-bottom: 20px;
+}
+
 .mailing-group {
   display: flex;
   flex-wrap: wrap;
@@ -618,6 +622,14 @@ header {
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-footer:hover,
+.input-footer:focus {
+  outline: none;
+  border-color: #2196f3;
 }
 
 .button-submit {
@@ -641,10 +653,12 @@ header {
   text-align: center;
   letter-spacing: 0.06em;
   color: #ffffff;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.title-mailing {
-  margin-bottom: 20px;
+.button-submit:hover {
+  background-color: #188ce8;
 }
 
 .icon-mailing {
@@ -844,6 +858,7 @@ header {
 } */
 
 .modal-form-title {
+  display: block;
   font-weight: bold;
   font-size: 20px;
   line-height: 1.15;
@@ -862,8 +877,11 @@ header {
 
 .modal-form-img {
   position: absolute;
-  top: 29px;
-  left: 12px;
+  /* top: 29px;
+  left: 12px; */
+  top: 50%;
+  transform: translateX(67%);
+
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -894,21 +912,21 @@ header {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-policy {
+.form-license {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
 }
 
-.modal-form .form-policy {
+.modal-form .form-license {
   font-size: 14px;
   line-height: 1.71px;
   letter-spacing: 0.03em;
   color: #757575;
 }
 
-.link-fotm-policy {
+.link-fotm-license {
   text-decoration: underline;
   color: #2196f3;
 }
@@ -921,7 +939,7 @@ header {
   fill: #2196f3;
 }
 
-.img-policy {
+.img-license {
   display: inline-block;
   border: 2px solid #212121;
   border-radius: 2px;
@@ -943,7 +961,7 @@ header {
   overflow: hidden;
 }
 
-.checkbox:checked + .img-policy {
+.checkbox:checked + .img-license {
   border-color: #2196f3;
   background-color: #2196f3;
 }
