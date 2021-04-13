@@ -330,7 +330,6 @@ header {
   position: absolute;
   left: 0;
   bottom: 0;
-  z-index: 1;
 
   display: flex;
   justify-content: center;
@@ -611,7 +610,7 @@ header {
   align-items: center; */
   border-radius: 4px;
   padding: 15px 16px;
-  min-width: 358px;
+  width: 358px;
   box-sizing: border-box;
 
   background: var(--bg-color);
@@ -626,10 +625,9 @@ header {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-footer:hover,
 .input-footer:focus {
-  outline: none;
   border-color: #2196f3;
+  outline: #2196f3;
 }
 
 .button-submit {
@@ -797,7 +795,6 @@ header {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 
-  z-index: 2;
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -869,28 +866,33 @@ header {
 }
 
 .form-item {
-  position: relative;
+  /* position: relative; */
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
 
-.modal-form-img {
-  position: absolute;
-  /* top: 29px;
-  left: 12px; */
-  top: 50%;
-  transform: translateX(67%);
-
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .form-item label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: #757575;
   margin-bottom: 4px;
+}
+
+.label-modal span {
+  margin-bottom: 4px;
+}
+
+.modal-form-img {
+  position: absolute;
+  top: 50%;
+  transform: translateX(67%);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-item input {
@@ -929,9 +931,10 @@ header {
 .link-fotm-license {
   text-decoration: underline;
   color: #2196f3;
+  margin-left: 4px;
 }
 .input-modal:focus {
-  outline: none;
+  outline-color: #2196f3;
   border-color: #2196f3;
 }
 
@@ -949,8 +952,6 @@ header {
 }
 
 .checkbox {
-  /* appearance: none; */
-  /* position: absolute; */
   position: absolute;
   width: 1px;
   height: 1px;
@@ -967,6 +968,9 @@ header {
 }
 
 .button-modal-form {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
